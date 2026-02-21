@@ -6,7 +6,8 @@ RUN apt-get update \
     curl \
     gcc \
     git \
+    postgresql-client \
     libpq-dev \
     && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /workspaces/aula-03
+WORKDIR /workspaces/ecommerce

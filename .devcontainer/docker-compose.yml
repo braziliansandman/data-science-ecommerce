@@ -4,14 +4,14 @@ services:
       context: ..
       dockerfile: .devcontainer/Dockerfile
     volumes:
-      - ..:/workspaces/aula-03:cached
-    working_dir: /workspaces/aula-03
+      - ..:/workspaces/ecommerce:cached
+    working_dir: /workspaces/ecommerce
     depends_on:
       - db
     environment:
       PGHOST: db
       PGPORT: 5432
-      PGDATABASE: credit
+      PGDATABASE: ecommerce
       PGUSER: postgres
       PGPASSWORD: postgres
     command: ["sleep", "infinity"]
@@ -19,7 +19,7 @@ services:
   db:
     image: postgres:17
     environment:
-      POSTGRES_DB: credit
+      POSTGRES_DB: ecommerce
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     volumes:
@@ -33,7 +33,7 @@ services:
       PGADMIN_DEFAULT_PASSWORD: admin
     ports:
       - target: 80
-        published: "5050"
+        published: "5051"
         host_ip: 0.0.0.0
         protocol: tcp
     depends_on:
