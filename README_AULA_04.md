@@ -1,4 +1,4 @@
-# Tutorial para o projeto de E-commerce (Olist)
+# Tutorial para o setup do projeto de E-commerce (Olist)
 
 ## Introdução
 
